@@ -1,7 +1,6 @@
 package ini_config_parser
 
 import (
-	"errors"
 	"fmt"
 	"os"
 	"testing"
@@ -15,10 +14,6 @@ func TestConfig(t *testing.T) {
 	}
 
 	config_path := fmt.Sprintf("%s/test_data/test.ini", path)
-
-	if _, err := os.Stat(config_path); errors.Is(err, os.ErrNotExist) {
-		t.Fatalf("Cannot find ini config test file")
-	}
 
 	config := IniConfigParse(config_path)
 
