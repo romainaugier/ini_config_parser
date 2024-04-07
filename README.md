@@ -3,6 +3,8 @@ Simple and easy to use .ini config parser written in Go
 
 ![BuildTest](https://github.com/romainaugier/ini_config_parser/actions/workflows/build_and_test.yml/badge.svg)
 
+`go install github.com/romainaugier/ini_config_parser@latest`
+
 API:
 ```go
 package main
