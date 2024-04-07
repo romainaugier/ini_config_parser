@@ -10,10 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Go 1.20
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
-          go-version: 1.20
+          go-version-file: '${{github.workspace}}/go.mod'
       - name: Install Dependencies
-        run: go get .
+        run: |
+            go get golang.org/x/strings
+            go get golang.org/x/errors
+            go get golang.org/x/os
       - name: Test Package
         run: go test
