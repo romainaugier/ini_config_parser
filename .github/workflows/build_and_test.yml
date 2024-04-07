@@ -15,8 +15,6 @@ jobs:
           go-version-file: '${{github.workspace}}/go.mod'
       - name: Install Dependencies
         run: |
-            go get golang.org/x/strings
-            go get golang.org/x/errors
-            go get golang.org/x/os
+            go install std
       - name: Test Package
         run: go test
