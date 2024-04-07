@@ -13,7 +13,8 @@ func main() {
 
     // Config will be nil if there was an error during parsing
     if config == nil {
-        t.Fatalf("Error during ini config parsing, check the log for more information")
+        fmt.Printf("Error during ini config parsing, check the log for more information")
+        return
     }
 
     // Gets a key value as string. By default, all values are stored as strings. If the key is not present,
